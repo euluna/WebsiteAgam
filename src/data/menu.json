@@ -1,0 +1,39 @@
+{
+  "store": {
+    "name": "Warung Example",
+    "phone": "628123456789",
+    "deliveryFee": 6000,
+    "currency": "IDR",
+    "currencyFormat": "k"
+  },
+  "categories": [
+    {
+      "id": "noodles",
+      "name": "Noodles 🍜",
+      "items": [
+        {
+          "id": "noodles-regular",
+          "name": "Regular Noodles",
+          "description": "Classic noodles with light soy",
+          "image": "/images/noodles-regular.jpg",
+          "variants": [
+            {"id": "normal", "label": "Normal", "price": 10000},
+            {"id": "plus-egg", "label": "+1 Egg", "price": 12000},
+            {"id": "plus-2eggs", "label": "+2 Eggs", "price": 14000},
+            {"id": "plus-chicken", "label": "+Chicken", "price": 17000}
+          ]
+        },
+        {
+          "id": "noodles-spicy",
+          "name": "Spicy Noodles",
+          "description": "Spicy with chili oil",
+          "image": "/images/noodles-spicy.jpg",
+          "variants": [
+            {"id": "normal", "label": "Normal", "price": 12000},
+            {"id": "plus-egg", "label": "+1 Egg", "price": 14000}
+          ]
+        }
+      ]
+    }
+  ]
+}
