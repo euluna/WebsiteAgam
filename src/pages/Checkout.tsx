@@ -42,7 +42,7 @@ export const Checkout: React.FC = () => {
       <div className="p-4 max-w-2xl mx-auto">
         <h1 className="text-2xl font-bold mb-4">Pembayaran</h1>
         <div className="mb-4 p-3 bg-neutral-100 rounded-lg">
-            <h3 className="font-semibold">Total Pesanan: {formatCurrency(summary.subtotal, currency)}</h3>
+            <h3 className="font-semibold">Total Pesanan: {formatCurrency(summary.subtotal, 'THB')}</h3>
           </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
