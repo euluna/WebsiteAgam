@@ -17,7 +17,7 @@ export const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      <Header onToggleCategories={() => setSidebarOpen(v => !v)} onBack={modalItem ? (() => setModalItem(null)) : undefined} />
 
       <main className="flex-1 p-4">
         <div className="max-w-6xl mx-auto flex gap-4">
@@ -28,18 +28,23 @@ export const Home: React.FC = () => {
 
           {/* Mobile floating toggle button (anchored left) */}
           <div className="md:hidden">
-            <button
-              aria-label="Toggle categories"
-              onClick={() => setSidebarOpen(v => !v)}
-              className="fixed left-3 top-1/3 z-50 w-12 h-12 rounded-full bg-orange-500 text-white flex items-center justify-center shadow-md">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-
             {/* Slide-in left panel when open */}
-            <div aria-hidden={!sidebarOpen} className={`fixed inset-y-0 left-0 z-50 w-64 transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-200 bg-white border-r p-2 overflow-auto`}> 
-              <CategoryChips categories={categories} selected={selectedCategory} onSelect={(id) => { setSelectedCategory(id); setSidebarOpen(false) }} />
+            <div aria-hidden={!sidebarOpen} className={`fixed inset-y-0 left-0 z-50 w-72 transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-200 bg-white border-r p-2 overflow-auto`}> 
+              <div className="relative">
+                <div className="pt-4 pr-12">
+                  <CategoryChips categories={categories} selected={selectedCategory} onSelect={(id) => { setSelectedCategory(id); setSidebarOpen(false) }} compact />
+                </div>
+
+                {/* Semicircle collapse button inside panel to avoid horizontal scroll */}
+                <button
+                  aria-label="Sembunyikan kategori"
+                  onClick={() => setSidebarOpen(false)}
+                  className="absolute top-1/2 right-0 transform -translate-y-1/2 w-10 h-12 rounded-l-full bg-orange-500 text-white flex items-center justify-center shadow-md hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M12.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 111.414 1.414L10.414 10l2.293 2.293a1 1 0 010 1.414z" clipRule="evenodd" />
+                  </svg>
+                </button>
+              </div>
             </div>
 
             {/* Overlay to close panel */}
@@ -50,7 +55,7 @@ export const Home: React.FC = () => {
           <div className="flex-1">
             <h1 className="text-lg font-bold mb-2">klik item untuk menambahkan ke keranjang.</h1>
             <div className="mt-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-3">
                 {items.map((item: any) => (
                   <ItemCard key={item.id} item={item} onSelect={() => setModalItem(item)} />
                 ))}

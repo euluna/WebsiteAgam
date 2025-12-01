@@ -2,7 +2,7 @@ import { CartItem, CheckoutData, CartSummary } from '../types'
 import { formatCurrency } from './currency'
 import menuData from '../data/menu.json'
 
-const { name: storeName, deliveryFee } = (menuData as any).store || { name: 'Store', deliveryFee: 0 }
+const { name: storeName } = (menuData as any).store || { name: 'Store' }
 
 const generateOrderId = (): string => {
   const num = Math.floor(1000 + Math.random() * 9000)
@@ -17,39 +17,47 @@ export const generateOrderMessage = (
   const { name, phone, address, paymentMethod, hasExactChange, cashPaid, currency, notes } = checkoutData
   const orderId = generateOrderId()
 
+  // display all prices in THB in the message body
+  const displayCurrency = 'THB'
   const itemLines = items.map(item => {
     const variantLabel = item.variant.label && item.variant.label !== 'Normal' ? ` ( ${item.variant.label} )` : ''
     const itemSubtotal = item.quantity * item.variant.price
-    return `- ${item.quantity}x ${item.name}${variantLabel} — ${formatCurrency(itemSubtotal, currency)}`
+    return `- ${item.quantity}x ${item.name}${variantLabel} — ${formatCurrency(itemSubtotal, displayCurrency)}`
   }).join('\n')
 
   let paymentLine: string
+  const paymentCurrencyTag = currency === 'IDR' ? '[IDR]' : '[THB]'
   if (paymentMethod === 'Cash') {
-    if (hasExactChange) {
-      paymentLine = `Pembayaran: Tunai (Uang pas)`
-    } else if (cashPaid && Number(cashPaid) > 0) {
-      const cash = Number(cashPaid)
-      const change = cash - summary.total
-      const changeLine = change > 0 ? `Kembalian: ${formatCurrency(change, currency)}` : 'Tidak ada kembalian'
-      paymentLine = `Pembayaran: Tunai — Jumlah tunai: ${formatCurrency(cash, currency)}; ${changeLine}`
+    if (currency === 'THB') {
+      if (hasExactChange) {
+        paymentLine = `Pembayaran: Tunai ${paymentCurrencyTag} (Uang pas)`
+      } else if (cashPaid && Number(cashPaid) > 0) {
+        const cash = Number(cashPaid)
+        const change = cash - summary.subtotal
+        const changeLine = change > 0 ? `Kembalian: ${formatCurrency(change, displayCurrency)}` : 'Tidak ada kembalian'
+        paymentLine = `Pembayaran: Tunai ${paymentCurrencyTag} — Jumlah tunai: ${formatCurrency(cash, displayCurrency)}; ${changeLine}`
+      } else {
+        paymentLine = `Pembayaran: Tunai ${paymentCurrencyTag}`
+      }
     } else {
-      paymentLine = `Pembayaran: Tunai`
+      // For IDR, staff will confirm the converted amount separately
+      paymentLine = `Pembayaran: Tunai ${paymentCurrencyTag} — Staff akan konfirmasi jumlah dalam IDR.`
     }
   } else {
-    paymentLine = `Pembayaran: Transfer (tunggu detail rekening)`
+    paymentLine = `Pembayaran: Transfer ${paymentCurrencyTag} (tunggu detail rekening)`
   }
 
-  const plainText = `Order from: ${storeName}\n\n` +
-    `Name: ${name}\n` +
-    `Phone: ${phone}\n` +
-    `Address: ${address}\n\n` +
-    `Order:\n${itemLines}\n\n` +
-    `Subtotal: ${formatCurrency(summary.subtotal, currency)}\n` +
-    `Delivery fee: ${formatCurrency(deliveryFee, currency)}\n` +
-    `Total: ${formatCurrency(summary.total, currency)}\n\n` +
-    `${paymentLine}\n` +
-    `Notes: ${notes || '-'}\n\n` +
-    `Order ID: ${orderId}`
+  const noteForIDR = checkoutData.currency === 'IDR' ? 'Catatan: Harga akhir akan dikonfirmasi dalam IDR oleh staff.' : ''
+
+    const plainText = `Order dari: ${storeName}\n\n` +
+      `Nama: ${name}\n` +
+      `Telepon: ${phone}\n` +
+      `Alamat: ${address}\n\n` +
+      `Order:\n${itemLines}\n\n` +
+      `Total: ${formatCurrency(summary.subtotal, displayCurrency)}\n\n` +
+      `${paymentLine}\n` +
+      `Notes: ${notes || '-'}\n\n` +
+      `${noteForIDR ? noteForIDR + '\n\n' : ''}`
 
   const encodedMessage = encodeURIComponent(plainText)
   const whatsappUrl = `https://wa.me/${(menuData as any).store.phone.replace(/[^0-9]/g, '')}?text=${encodedMessage}`
