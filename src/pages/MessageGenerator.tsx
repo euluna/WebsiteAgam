@@ -19,7 +19,7 @@ export const MessageGenerator: React.FC = () => {
     )
   }
 
-  const { plainText, whatsappUrl, telegramUrl } = generateOrderMessage(cart, checkoutData, summary)
+  const { plainText, whatsappUrl, whatsappUrl2, telegramUrl } = generateOrderMessage(cart, checkoutData, summary)
   const [copied, setCopied] = useState(false)
 
   const handleCopy = async () => {
@@ -65,8 +65,9 @@ export const MessageGenerator: React.FC = () => {
           </div>
 
         <div className="mt-4 space-y-2">
-          <a className="block w-full text-center bg-green-600 text-white p-3 rounded" href={whatsappUrl} target="_blank" rel="noreferrer">Buka WhatsApp</a>
-          <a className="block w-full text-center bg-blue-600 text-white p-3 rounded" href={telegramUrl} target="_blank" rel="noreferrer">Bagikan ke Telegram</a>
+          <a className="block w-full text-center bg-green-600 text-white p-3 rounded" href={whatsappUrl} target="_blank" rel="noreferrer">WhatsApp 1 [ +62 859-4521-6880 ]</a>
+          <a className="block w-full text-center bg-green-700 text-white p-3 rounded" href={whatsappUrl2} target="_blank" rel="noreferrer">WhatsApp 2 [ +855 96 290 2125 ]</a>
+          <a className="block w-full text-center bg-blue-600 text-white p-3 rounded" href={telegramUrl} target="_blank" rel="noreferrer">Telegram (@agamparamax)</a>
         </div>
 
         <div className="mt-4 flex space-x-2">

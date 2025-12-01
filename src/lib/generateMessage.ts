@@ -13,7 +13,7 @@ export const generateOrderMessage = (
   items: CartItem[],
   checkoutData: CheckoutData,
   summary: CartSummary
-): { plainText: string; whatsappUrl: string; telegramUrl: string } => {
+): { plainText: string; whatsappUrl: string; whatsappUrl2: string; telegramUrl: string } => {
   const { name, phone, address, paymentMethod, hasExactChange, cashPaid, currency, notes } = checkoutData
   const orderId = generateOrderId()
 
@@ -60,8 +60,15 @@ export const generateOrderMessage = (
       `${noteForIDR ? noteForIDR + '\n\n' : ''}`
 
   const encodedMessage = encodeURIComponent(plainText)
-  const whatsappUrl = `https://wa.me/${(menuData as any).store.phone.replace(/[^0-9]/g, '')}?text=${encodedMessage}`
-  const telegramUrl = `https://t.me/share/url?text=${encodedMessage}`
 
-  return { plainText, whatsappUrl, telegramUrl }
+  // Explicit contact channels requested by the user
+  const whatsapp1 = '+6285945216880'
+  const whatsapp2 = '+855962902125'
+  const telegramHandle = 'agamparamax'
+
+  const whatsappUrl = `https://wa.me/${whatsapp1.replace(/[^0-9]/g, '')}?text=${encodedMessage}`
+  const whatsappUrl2 = `https://wa.me/${whatsapp2.replace(/[^0-9]/g, '')}?text=${encodedMessage}`
+  const telegramProfileUrl = `https://t.me/${telegramHandle}`
+
+  return { plainText, whatsappUrl, whatsappUrl2, telegramUrl: telegramProfileUrl }
 }
