@@ -1,36 +1,1650 @@
 {
   "store": {
-    "name": "Warung Example",
+    "name": "Warkop Agam Poipet",
     "phone": "628123456789",
-    "deliveryFee": 6000,
-    "currency": "IDR",
-    "currencyFormat": "k"
+    "deliveryFee": 6,
+    "currency": "THB",
+    "currencyFormat": "฿"
   },
   "categories": [
     {
-      "id": "noodles",
-      "name": "Noodles 🍜",
+      "id": "penyet",
+      "name": "Nasi & Penyet",
       "items": [
         {
-          "id": "noodles-regular",
-          "name": "Regular Noodles",
-          "description": "Classic noodles with light soy",
-          "image": "/images/noodles-regular.jpg",
+          "id": "ayam-penyet",
+          "name": "Penyet & Sop - AYAM PENYET",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_6643922664e29.jpg",
           "variants": [
-            {"id": "normal", "label": "Normal", "price": 10000},
-            {"id": "plus-egg", "label": "+1 Egg", "price": 12000},
-            {"id": "plus-2eggs", "label": "+2 Eggs", "price": 14000},
-            {"id": "plus-chicken", "label": "+Chicken", "price": 17000}
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 90
+            }
           ]
         },
         {
-          "id": "noodles-spicy",
-          "name": "Spicy Noodles",
-          "description": "Spicy with chili oil",
-          "image": "/images/noodles-spicy.jpg",
+          "id": "bubur-ayam",
+          "name": "Bubur Ayam",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_680e83d0073e5.jpeg",
           "variants": [
-            {"id": "normal", "label": "Normal", "price": 12000},
-            {"id": "plus-egg", "label": "+1 Egg", "price": 14000}
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 80
+            }
+          ]
+        },
+        {
+          "id": "cumi-goreng",
+          "name": "Penyet & Sop - CUMI GORENG",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_6643922664e29.jpg",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "id": "gembung-penyet",
+          "name": "Penyet & Sop - GEMBUNG PENYET",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_6643922664e29.jpg",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "id": "lele-penyet",
+          "name": "Penyet & Sop - LELE PENYET",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_6643922664e29.jpg",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "id": "lontong",
+          "name": "Lontong",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_680e80578e2e7.jpg",
+          "variants": [
+            {
+              "id": "lontong-sayur",
+              "label": "Lontong Sayur",
+              "price": 80
+            },
+            {
+              "id": "lontong-sayur-jumbo",
+              "label": "Lontong Sayur Jumbo",
+              "price": 110
+            }
+          ]
+        },
+        {
+          "id": "mie-rebus",
+          "name": "Mie Rebus",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_68d387150fe5d.jpg",
+          "variants": [
+            {
+              "id": "mie-rebus",
+              "label": "MIE REBUS",
+              "price": 100
+            },
+            {
+              "id": "mie-rebus-jumbo",
+              "label": "MIE REBUS JUMBO",
+              "price": 130
+            }
+          ]
+        },
+        {
+          "id": "misop-kampung",
+          "name": "Misop Kampung",
+          "image": "/images/penyet.jpg",
+          "variants": [
+            {
+              "id": "misop-kampung-ayam",
+              "label": "MISOP KAMPUNG AYAM",
+              "price": 90
+            },
+            {
+              "id": "misop-kampung-ayam-indomie",
+              "label": "MISOP KAMPUNG AYAM Indomie",
+              "price": 100
+            },
+            {
+              "id": "misop-kampung-ayam-bakso",
+              "label": "MISOP KAMPUNG AYAM BAKSO",
+              "price": 110
+            },
+            {
+              "id": "misop-kampung-ayam-bakso-indomie",
+              "label": "MISOP KAMPUNG AYAM BAKSO Indomie",
+              "price": 120
+            }
+          ]
+        },
+        {
+          "id": "nasi-kuning",
+          "name": "Nasi Kuning",
+          "image": "/images/penyet.jpg",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "id": "nasi-sayur",
+          "name": "NASI SAYUR",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_68d38696f24c0.jpg",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 80
+            }
+          ]
+        },
+        {
+          "id": "nasi-soto",
+          "name": "Penyet & Sop - NASI SOTO",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_6643922664e29.jpg",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 100
+            }
+          ]
+        },
+        {
+          "id": "nasi-uduk",
+          "name": "Nasi Uduk",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_680e85817ed93.jpeg",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 20
+            }
+          ]
+        },
+        {
+          "id": "nila-penyet",
+          "name": "Penyet & Sop - NILA PENYET",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_6643922664e29.jpg",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "id": "perkedel",
+          "name": "Perkedel",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_680e815169a02.PNG",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 20
+            }
+          ]
+        },
+        {
+          "id": "rice-bowl",
+          "name": "Rice Bowl",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_66eff98ae4dab.jpg",
+          "variants": [
+            {
+              "id": "nasi-sarden",
+              "label": "NASI SARDEN",
+              "price": 90
+            },
+            {
+              "id": "rice-bowl-telor-balado",
+              "label": "RICE BOWL TELOR BALADO",
+              "price": 60
+            },
+            {
+              "id": "nasi-telor-pontianak",
+              "label": "NASI TELOR PONTIANAK",
+              "price": 55
+            },
+            {
+              "id": "rice-bowl-ayam-balado",
+              "label": "RICE BOWL AYAM BALADO",
+              "price": 100
+            },
+            {
+              "id": "rice-bowl-ayam-sambal-matah",
+              "label": "RICE BOWL AYAM SAMBAL MATAH",
+              "price": 100
+            },
+            {
+              "id": "rice-bowl-ayam-wijen-mentega",
+              "label": "RICE BOWL AYAM WIJEN MENTEGA",
+              "price": 100
+            },
+            {
+              "id": "rice-bowl-ayam-telor-asin",
+              "label": "RICE BOWL AYAM TELOR ASIN",
+              "price": 110
+            },
+            {
+              "id": "rice-bowl-tongkol-suwir-kemangi",
+              "label": "RICE BOWL TONGKOL SUWIR KEMANGI",
+              "price": 110
+            },
+            {
+              "id": "rice-bowl-ayam-andaliman",
+              "label": "RICE BOWL AYAM ANDALIMAN",
+              "price": 130
+            },
+            {
+              "id": "rice-bowl-udang-telor-asin",
+              "label": "RICE BOWL UDANG TELOR ASIN",
+              "price": 130
+            },
+            {
+              "id": "rice-bowl-cumi-telor-asin",
+              "label": "RICE BOWL CUMI TELOR ASIN",
+              "price": 130
+            }
+          ]
+        },
+        {
+          "id": "sop-iga-sapi",
+          "name": "Penyet & Sop - SOP IGA SAPI",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_6643922664e29.jpg",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 150
+            }
+          ]
+        },
+        {
+          "id": "tahu-penyet",
+          "name": "Penyet & Sop - TAHU PENYET",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_6643922664e29.jpg",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 60
+            }
+          ]
+        },
+        {
+          "id": "tahu-tempe-penyet",
+          "name": "Penyet & Sop - TAHU TEMPE PENYET",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_6643922664e29.jpg",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 60
+            }
+          ]
+        },
+        {
+          "id": "tempe-penyet",
+          "name": "Penyet & Sop - TEMPE PENYET",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_6643922664e29.jpg",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 60
+            }
+          ]
+        },
+        {
+          "id": "tulang-goreng",
+          "name": "TULANG GORENG",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_68f4fc6683609.jpg",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 60
+            }
+          ]
+        },
+        {
+          "id": "udang-goreng",
+          "name": "Penyet & Sop - UDANG GORENG",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_6643922664e29.jpg",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nasi",
+      "name": "Nasi",
+      "items": [
+        {
+          "id": "nasi-goreng",
+          "name": "Nasi Goreng",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_659fc8339e631.jpg",
+          "variants": [
+            {
+              "id": "tambo-nasgor",
+              "label": "TAMBO NASGOR",
+              "price": 30
+            },
+            {
+              "id": "nasgor-kampung",
+              "label": "NASGOR KAMPUNG",
+              "price": 80
+            },
+            {
+              "id": "nasgor-aceh",
+              "label": "NASGOR ACEH",
+              "price": 80
+            },
+            {
+              "id": "minas-ori",
+              "label": "MINAS ORI",
+              "price": 120
+            },
+            {
+              "id": "nasgor-seafood",
+              "label": "NASGOR SEAFOOD",
+              "price": 135
+            },
+            {
+              "id": "nasgor-kampung-jumbo",
+              "label": "NASGOR KAMPUNG JUMBO",
+              "price": 110
+            },
+            {
+              "id": "nasgor-aceh-jumbo",
+              "label": "NASGOR ACEH JUMBO",
+              "price": 110
+            },
+            {
+              "id": "minas-jumbo",
+              "label": "MINAS JUMBO",
+              "price": 150
+            },
+            {
+              "id": "nasgor-seafood-jumbo",
+              "label": "NASGOR SEAFOOD JUMBO",
+              "price": 165
+            }
+          ]
+        },
+        {
+          "id": "nasi-putih",
+          "name": "Nasi Putih",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_6711ecb21392b.jpg",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mie-aceh",
+      "name": "Mie Aceh",
+      "items": [
+        {
+          "id": "mie-aceh",
+          "name": "Mie Aceh",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_664cb8b32fe28.jpg",
+          "variants": [
+            {
+              "id": "mie-aceh",
+              "label": "MIE ACEH",
+              "price": 80
+            },
+            {
+              "id": "mie-aceh-ayam",
+              "label": "MIE ACEH AYAM",
+              "price": 100
+            },
+            {
+              "id": "mie-aceh-jumbo",
+              "label": "MIE ACEH JUMBO",
+              "price": 110
+            },
+            {
+              "id": "mie-aceh-ayam-jumbo",
+              "label": "MIE ACEH AYAM JUMBO",
+              "price": 130
+            },
+            {
+              "id": "mie-aceh-seafood",
+              "label": "MIE ACEH SEAFOOD",
+              "price": 135
+            },
+            {
+              "id": "mie-aceh-sapi",
+              "label": "MIE ACEH SAPI",
+              "price": 145
+            },
+            {
+              "id": "mie-aceh-seafood-jumbo",
+              "label": "MIE ACEH SEAFOOD JUMBO",
+              "price": 165
+            },
+            {
+              "id": "mie-aceh-sapi-jumbo",
+              "label": "MIE ACEH SAPI JUMBO",
+              "price": 175
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ifumie",
+      "name": "Ifumie",
+      "items": [
+        {
+          "id": "ifumie",
+          "name": "Ifumie",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_668cd8637745a.jpg",
+          "variants": [
+            {
+              "id": "ifumie",
+              "label": "IFUMIE",
+              "price": 80
+            },
+            {
+              "id": "ifumie-ayam",
+              "label": "IFUMIE AYAM",
+              "price": 100
+            },
+            {
+              "id": "ifumie-jumbo",
+              "label": "IFUMIE JUMBO",
+              "price": 110
+            },
+            {
+              "id": "ifumie-ayam-jumbo",
+              "label": "IFUMIE AYAM JUMBO",
+              "price": 130
+            },
+            {
+              "id": "ifumie-seafood",
+              "label": "IFUMIE SEAFOOD",
+              "price": 135
+            },
+            {
+              "id": "ifumie-sapi",
+              "label": "IFUMIE SAPI",
+              "price": 145
+            },
+            {
+              "id": "ifumie-seafood-jumbo",
+              "label": "IFUMIE SEAFOOD JUMBO",
+              "price": 165
+            },
+            {
+              "id": "ifumie-sapi-jumbo",
+              "label": "IFUMIE SAPI JUMBO",
+              "price": 175
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "indomie",
+      "name": "Indomie / Mie Instan",
+      "items": [
+        {
+          "id": "indomie-alok",
+          "name": "Indomie Alok",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_659fddafa0cf4.jpg",
+          "variants": [
+            {
+              "id": "indomie-alok",
+              "label": "INDOMIE ALOK",
+              "price": 80
+            },
+            {
+              "id": "indomie-alok-jumbo",
+              "label": "INDOMIE ALOK JUMBO",
+              "price": 110
+            }
+          ]
+        },
+        {
+          "id": "indomie-bangladesh",
+          "name": "Indomie Bangladesh",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_658f0858cdd68.jpg",
+          "variants": [
+            {
+              "id": "bangla",
+              "label": "BANGLA",
+              "price": 80
+            },
+            {
+              "id": "bangla-1-poding",
+              "label": "BANGLA 1 PODING",
+              "price": 100
+            },
+            {
+              "id": "bangla-jumbo",
+              "label": "BANGLA JUMBO",
+              "price": 110
+            },
+            {
+              "id": "bangla-2-poding",
+              "label": "BANGLA 2 PODING",
+              "price": 120
+            },
+            {
+              "id": "bangla-jumbo-1-poding",
+              "label": "BANGLA JUMBO 1 PODING",
+              "price": 130
+            },
+            {
+              "id": "bangla-seafood",
+              "label": "BANGLA SEAFOOD",
+              "price": 135
+            },
+            {
+              "id": "bangla-jumbo-2-poding",
+              "label": "BANGLA JUMBO 2 PODING",
+              "price": 150
+            },
+            {
+              "id": "bangla-tri",
+              "label": "BANGLA TRI",
+              "price": 150
+            },
+            {
+              "id": "bangla-seafood-jumbo",
+              "label": "BANGLA SEAFOOD JUMBO",
+              "price": 165
+            },
+            {
+              "id": "bangla-tri-2-poding",
+              "label": "BANGLA TRI 2 PODING",
+              "price": 190
+            }
+          ]
+        },
+        {
+          "id": "indomie-goreng",
+          "name": "Indomie Goreng",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_65a01cb0eaad9.jpg",
+          "variants": [
+            {
+              "id": "indomie-goreng",
+              "label": "INDOMIE GORENG",
+              "price": 80
+            },
+            {
+              "id": "indomie-goreng-ori",
+              "label": "INDOMIE GORENG ORI",
+              "price": 80
+            },
+            {
+              "id": "indomie-goreng-jumbo",
+              "label": "INDOMIE GORENG JUMBO",
+              "price": 110
+            },
+            {
+              "id": "indomie-goreng-ori-jumbo",
+              "label": "INDOMIE GORENG ORI JUMBO",
+              "price": 110
+            },
+            {
+              "id": "indomie-goreng-tri",
+              "label": "INDOMIE GORENG TRI",
+              "price": 150
+            }
+          ]
+        },
+        {
+          "id": "indomie-kuah",
+          "name": "Indomie Kuah",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_65a01c8d03982.jpg",
+          "variants": [
+            {
+              "id": "indomie-kuah",
+              "label": "INDOMIE KUAH",
+              "price": 80
+            },
+            {
+              "id": "indomie-kuah-ori",
+              "label": "INDOMIE KUAH ORI",
+              "price": 80
+            },
+            {
+              "id": "indomie-kuah-jumbo",
+              "label": "INDOMIE KUAH JUMBO",
+              "price": 110
+            },
+            {
+              "id": "indomie-kuah-ori-jumbo",
+              "label": "INDOMIE KUAH ORI JUMBO",
+              "price": 110
+            },
+            {
+              "id": "indomie-kuah-ori-tri",
+              "label": "INDOMIE KUAH ORI TRI",
+              "price": 150
+            },
+            {
+              "id": "indomie-kuah-tri",
+              "label": "INDOMIE KUAH TRI",
+              "price": 150
+            }
+          ]
+        },
+        {
+          "id": "indomie-pakistan",
+          "name": "Indomie Pakistan",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_659fe182b25a7.jpg",
+          "variants": [
+            {
+              "id": "indomie-pakistan",
+              "label": "INDOMIE PAKISTAN",
+              "price": 80
+            },
+            {
+              "id": "indomie-pakistan-jumbo",
+              "label": "INDOMIE PAKISTAN JUMBO",
+              "price": 110
+            },
+            {
+              "id": "indomie-pakistan-tri",
+              "label": "INDOMIE PAKISTAN TRI",
+              "price": 150
+            }
+          ]
+        },
+        {
+          "id": "indomie-pecak-cabe-ijo",
+          "name": "Indomie Pecak Cabe Ijo",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_658eddb8d43e4.png",
+          "variants": [
+            {
+              "id": "indo-pecak-cabe-ijo",
+              "label": "INDO PECAK CABE IJO",
+              "price": 80
+            },
+            {
+              "id": "indo-pecak-cabe-ijo-jumbo",
+              "label": "INDO PECAK CABE IJO JUMBO",
+              "price": 110
+            }
+          ]
+        },
+        {
+          "id": "martabak-indomie",
+          "name": "MARTABAK INDOMIE",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_659fe982754c9.jpg",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 120
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "martabak",
+      "name": "Martabak & Roti Cane",
+      "items": [
+        {
+          "id": "martabak",
+          "name": "Martabak",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_663b854e99dd1.jpg",
+          "variants": [
+            {
+              "id": "cane-gula-pasir",
+              "label": "CANE GULA PASIR",
+              "price": 70
+            },
+            {
+              "id": "cane-kuah-kari",
+              "label": "CANE KUAH KARI",
+              "price": 80
+            },
+            {
+              "id": "cane-susu-coklat",
+              "label": "CANE SUSU COKLAT",
+              "price": 80
+            },
+            {
+              "id": "cane-susu-putih",
+              "label": "CANE SUSU PUTIH",
+              "price": 80
+            },
+            {
+              "id": "martabak-telor-2-telor",
+              "label": "MARTABAK TELOR (2 TELOR)",
+              "price": 90
+            },
+            {
+              "id": "cane-keju-susu-coklat",
+              "label": "CANE KEJU SUSU COKLAT",
+              "price": 100
+            },
+            {
+              "id": "cane-keju-susu-putih",
+              "label": "CANE KEJU SUSU PUTIH",
+              "price": 100
+            },
+            {
+              "id": "mesir-2-telor",
+              "label": "MESIR (2 TELOR)",
+              "price": 105
+            },
+            {
+              "id": "martabak-telor-3-telor",
+              "label": "MARTABAK TELOR (3 TELOR)",
+              "price": 105
+            },
+            {
+              "id": "martabak-telor-4-telor",
+              "label": "MARTABAK TELOR (4 TELOR)",
+              "price": 120
+            },
+            {
+              "id": "mesir-3-telor",
+              "label": "MESIR (3 TELOR)",
+              "price": 120
+            },
+            {
+              "id": "mesir-4-telor",
+              "label": "MESIR (4 TELOR)",
+              "price": 135
+            }
+            ,
+            {
+              "id": "ekstra-kuah-kari",
+              "label": "EKSTRA KUAH KARI",
+              "price": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cakwe",
+      "name": "Gorengan & Camilan",
+      "items": [
+        {
+          "id": "cakwe",
+          "name": "Cakwe",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_66f2b18495dc0.jpg",
+          "variants": [
+            {
+              "id": "cakwe",
+              "label": "CAKWE",
+              "price": 30
+            },
+            {
+              "id": "roti-goreng",
+              "label": "ROTI GORENG",
+              "price": 30
+            },
+            {
+              "id": "roti-goreng-ketan",
+              "label": "ROTI GORENG KETAN",
+              "price": 30
+            }
+          ]
+        },
+        {
+          "id": "gorengan",
+          "name": "Gorengan",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_680e82b08c8cf.jpg",
+          "variants": [
+            {
+              "id": "bakwan-goreng-3pcs",
+              "label": "Bakwan Goreng 3pcs",
+              "price": 50
+            },
+            {
+              "id": "pisang-goreng-3pcs",
+              "label": "Pisang Goreng 3pcs",
+              "price": 50
+            },
+            {
+              "id": "ubi-goreng-3pcs",
+              "label": "Ubi Goreng 3pcs",
+              "price": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "snack-meja",
+      "name": "Snack Meja",
+      "items": [
+        {
+          "id": "risol",
+          "name": "RISOL",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_680e80b906f13.jpg",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 50
+            }
+          ]
+        },
+        {
+          "id": "snack-meja-agar2-santan-gula-merah",
+          "name": "Snack Meja - AGAR2 SANTAN GULA MERAH",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_6711deb85377f.jpg",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 50
+            }
+          ]
+        },
+        {
+          "id": "snack-meja-bubur",
+          "name": "Snack Meja - Bubur",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_6711e2d95d4e9.jpg",
+          "variants": [
+            {
+              "id": "bubur-kacang-ijo",
+              "label": "BUBUR KACANG IJO",
+              "price": 50
+            },
+            {
+              "id": "bubur-ketan-hitam",
+              "label": "BUBUR KETAN HITAM",
+              "price": 50
+            }
+          ]
+        },
+        {
+          "id": "snack-meja-kerupuk",
+          "name": "Snack Meja - Kerupuk",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_6711de609b898.jpg",
+          "variants": [
+            {
+              "id": "kerupuk-putih",
+              "label": "KERUPUK PUTIH",
+              "price": 15
+            },
+            {
+              "id": "kerupuk-udang",
+              "label": "KERUPUK UDANG",
+              "price": 30
+            },
+            {
+              "id": "emping",
+              "label": "EMPING",
+              "price": 50
+            },
+            {
+              "id": "kulit-ayam",
+              "label": "KULIT AYAM",
+              "price": 50
+            },
+            {
+              "id": "peyek-kacang",
+              "label": "PEYEK KACANG",
+              "price": 50
+            }
+          ]
+        },
+        {
+          "id": "snack-meja-nasi-kucing",
+          "name": "Snack Meja - NASI KUCING",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_6711dea08f6fc.jpg",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 50
+            }
+          ]
+        },
+        {
+          "id": "snack-meja-sate",
+          "name": "Snack Meja - Sate",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_6711de7daa90f.jpg",
+          "variants": [
+            {
+              "id": "sate-jengkol",
+              "label": "SATE JENGKOL",
+              "price": 30
+            },
+            {
+              "id": "sate-kerang",
+              "label": "SATE KERANG",
+              "price": 30
+            },
+            {
+              "id": "sate-telor-puyuh",
+              "label": "SATE TELOR PUYUH",
+              "price": 30
+            }
+          ]
+        },
+        {
+          "id": "snack-meja-telor-asin",
+          "name": "Snack Meja - TELOR ASIN",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_6711de393df78.jpg",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "snack",
+      "name": "Camilan Kemasan",
+      "items": [
+        {
+          "id": "snack",
+          "name": "Snack",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_6711e7d0ee9cb.jpg",
+          "variants": [
+            {
+              "id": "pempek-isi-4",
+              "label": "PEMPEK (isi 4)",
+              "price": 50
+            },
+            {
+              "id": "kentang-goreng",
+              "label": "KENTANG GORENG",
+              "price": 80
+            },
+            {
+              "id": "nugget-ayam",
+              "label": "NUGGET AYAM",
+              "price": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telor",
+      "name": "Telur & Sampingan",
+      "items": [
+        {
+          "id": "telor",
+          "name": "Telor",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_659fd3431540d.jpg",
+          "variants": [
+            {
+              "id": "telor-rebus",
+              "label": "TELOR REBUS",
+              "price": 20
+            },
+            {
+              "id": "telor-mata-sapi",
+              "label": "TELOR MATA SAPI",
+              "price": 20
+            },
+            {
+              "id": "telor-dadar",
+              "label": "TELOR DADAR",
+              "price": 20
+            },
+            {
+              "id": "telor-dadar-rawit",
+              "label": "TELOR DADAR RAWIT",
+              "price": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "minuman",
+      "name": "Minuman",
+      "items": [
+        {
+          "id": "air-putih",
+          "name": "Air Putih",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_659fe4d52900c.jpg",
+          "variants": [
+            {
+              "id": "es-kosong",
+              "label": "ES KOSONG",
+              "price": 10
+            },
+            {
+              "id": "air-putih-hangat",
+              "label": "AIR PUTIH HANGAT",
+              "price": 10
+            },
+            {
+              "id": "air-putih-panas",
+              "label": "AIR PUTIH PANAS",
+              "price": 10
+            }
+          ]
+        },
+        {
+          "id": "bandrek",
+          "name": "Bandrek",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_66e615f2535bf.jpg",
+          "variants": [
+            {
+              "id": "bandrek-ori",
+              "label": "BANDREK ORI",
+              "price": 50
+            },
+            {
+              "id": "bandrek-susu",
+              "label": "BANDREK SUSU",
+              "price": 60
+            },
+            {
+              "id": "bandrek-susu-telor",
+              "label": "BANDREK SUSU TELOR",
+              "price": 80
+            },
+            {
+              "id": "bandrek-susu-2-telor",
+              "label": "BANDREK SUSU 2 TELOR",
+              "price": 100
+            }
+          ]
+        },
+        {
+          "id": "jamu-kunyit-asam",
+          "name": "JAMU KUNYIT ASAM",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_68dbd058a3f25.jpg",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 50
+            }
+          ]
+        },
+        {
+          "id": "jus",
+          "name": "Jus",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_664e3fc00b03b.jpg",
+          "variants": [
+            {
+              "id": "mangga",
+              "label": "MANGGA",
+              "price": 80
+            },
+            {
+              "id": "semangka",
+              "label": "SEMANGKA",
+              "price": 80
+            },
+            {
+              "id": "naga",
+              "label": "NAGA",
+              "price": 80
+            },
+            {
+              "id": "jeruk",
+              "label": "JERUK",
+              "price": 80
+            },
+            {
+              "id": "alpokat",
+              "label": "ALPOKAT",
+              "price": 80
+            },
+            {
+              "id": "wortel",
+              "label": "WORTEL",
+              "price": 80
+            },
+            {
+              "id": "timun",
+              "label": "TIMUN",
+              "price": 80
+            },
+            {
+              "id": "alpokat-milo",
+              "label": "ALPOKAT MILO",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "id": "kopi",
+          "name": "Kopi",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_658f101696887.jpeg",
+          "variants": [
+            {
+              "id": "kopi-hitam-panas",
+              "label": "KOPI HITAM PANAS",
+              "price": 50
+            },
+            {
+              "id": "kopi-aceh-panas",
+              "label": "KOPI ACEH PANAS",
+              "price": 50
+            },
+            {
+              "id": "kopi-hitam-dingin",
+              "label": "KOPI HITAM DINGIN",
+              "price": 50
+            },
+            {
+              "id": "kopi-susu-panas",
+              "label": "KOPI SUSU PANAS",
+              "price": 60
+            },
+            {
+              "id": "kopi-sanger-panas",
+              "label": "KOPI SANGER PANAS",
+              "price": 60
+            },
+            {
+              "id": "kopi-milo-susu-panas",
+              "label": "KOPI MILO SUSU PANAS",
+              "price": 60
+            },
+            {
+              "id": "kopi-susu-dingin",
+              "label": "KOPI SUSU DINGIN",
+              "price": 60
+            },
+            {
+              "id": "kopi-sanger-dingin",
+              "label": "KOPI SANGER DINGIN",
+              "price": 60
+            },
+            {
+              "id": "kopi-milo-susu-dingin",
+              "label": "KOPI MILO SUSU DINGIN",
+              "price": 60
+            }
+          ]
+        },
+        {
+          "id": "minuman-kaleng-botol",
+          "name": "Minuman Kaleng / Botol",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_659fac6f27f2b.jpg",
+          "variants": [
+            {
+              "id": "namthip",
+              "label": "NAMTHIP",
+              "price": 15
+            },
+            {
+              "id": "angkor-puro-water-500ml",
+              "label": "ANGKOR PURO WATER 500ml",
+              "price": 15
+            },
+            {
+              "id": "7-up",
+              "label": "7 UP",
+              "price": 35
+            },
+            {
+              "id": "liang-teh",
+              "label": "LIANG TEH",
+              "price": 35
+            },
+            {
+              "id": "oishi",
+              "label": "OISHI",
+              "price": 35
+            },
+            {
+              "id": "mirinda",
+              "label": "MIRINDA",
+              "price": 35
+            },
+            {
+              "id": "coca-cola",
+              "label": "COCA COLA",
+              "price": 40
+            },
+            {
+              "id": "pepsi",
+              "label": "PEPSI",
+              "price": 40
+            },
+            {
+              "id": "sting",
+              "label": "STING",
+              "price": 40
+            },
+            {
+              "id": "fanta",
+              "label": "FANTA",
+              "price": 40
+            },
+            {
+              "id": "a-w",
+              "label": "A&W",
+              "price": 50
+            },
+            {
+              "id": "pocari-sweat",
+              "label": "POCARI SWEAT",
+              "price": 50
+            },
+            {
+              "id": "fanta-susu",
+              "label": "FANTA SUSU",
+              "price": 50
+            },
+            {
+              "id": "a-w-susu",
+              "label": "A&W SUSU",
+              "price": 60
+            },
+            {
+              "id": "badak",
+              "label": "BADAK",
+              "price": 90
+            },
+            {
+              "id": "badak-susu",
+              "label": "BADAK SUSU",
+              "price": 100
+            }
+          ]
+        },
+        {
+          "id": "minuman-sachet",
+          "name": "Minuman Sachet",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_659fbcd853441.jpg",
+          "variants": [
+            {
+              "id": "adem-sari",
+              "label": "ADEM SARI",
+              "price": 40
+            },
+            {
+              "id": "nutrisari-jeruk",
+              "label": "NUTRISARI JERUK",
+              "price": 40
+            },
+            {
+              "id": "nutrisari-jeruk-nipis",
+              "label": "NUTRISARI JERUK NIPIS",
+              "price": 40
+            },
+            {
+              "id": "nutrisari-anggur",
+              "label": "NUTRISARI ANGGUR",
+              "price": 40
+            },
+            {
+              "id": "cappuccino-panas",
+              "label": "CAPPUCCINO PANAS",
+              "price": 45
+            },
+            {
+              "id": "coffeemix-panas",
+              "label": "COFFEEMIX PANAS",
+              "price": 45
+            },
+            {
+              "id": "milo-panas",
+              "label": "MILO PANAS",
+              "price": 45
+            },
+            {
+              "id": "kopi-gula-aren-panas",
+              "label": "KOPI GULA AREN PANAS",
+              "price": 45
+            },
+            {
+              "id": "kopi-luwak-dingin",
+              "label": "KOPI LUWAK DINGIN",
+              "price": 45
+            },
+            {
+              "id": "milo-dingin",
+              "label": "MILO DINGIN",
+              "price": 45
+            },
+            {
+              "id": "cappuccino-dingin",
+              "label": "CAPPUCCINO DINGIN",
+              "price": 45
+            },
+            {
+              "id": "coffeemix-dingin",
+              "label": "COFFEEMIX DINGIN",
+              "price": 45
+            },
+            {
+              "id": "kopi-luwak-panas",
+              "label": "KOPI LUWAK PANAS",
+              "price": 45
+            },
+            {
+              "id": "kopi-gula-aren-dingin",
+              "label": "KOPI GULA AREN DINGIN",
+              "price": 45
+            },
+            {
+              "id": "remix-ademsari-nutrisari",
+              "label": "REMIX (AdemSari + NutriSari)",
+              "price": 50
+            },
+            {
+              "id": "kuku-bima",
+              "label": "KUKU BIMA",
+              "price": 50
+            },
+            {
+              "id": "nutrisari-susu",
+              "label": "NUTRISARI SUSU",
+              "price": 50
+            },
+            {
+              "id": "kuku-bima-susu",
+              "label": "KUKU BIMA SUSU",
+              "price": 60
+            }
+          ]
+        },
+        {
+          "id": "poding",
+          "name": "Poding",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_658edadc22356.jpg",
+          "variants": [
+            {
+              "id": "poding-1-telur",
+              "label": "PODING 1 TELUR",
+              "price": 20
+            },
+            {
+              "id": "poding-2-telur",
+              "label": "PODING 2 TELUR",
+              "price": 40
+            },
+            {
+              "id": "poding-3-telur",
+              "label": "PODING 3 TELUR",
+              "price": 60
+            },
+            {
+              "id": "poding-4-telur",
+              "label": "PODING 4 TELUR",
+              "price": 80
+            },
+            {
+              "id": "poding-5-telur",
+              "label": "PODING 5 TELUR",
+              "price": 100
+            }
+          ]
+        },
+        {
+          "id": "susu",
+          "name": "Susu",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_65a019e471770.jpg",
+          "variants": [
+            {
+              "id": "susu-putih-panas",
+              "label": "SUSU PUTIH PANAS",
+              "price": 40
+            },
+            {
+              "id": "susu-putih-dingin",
+              "label": "SUSU PUTIH DINGIN",
+              "price": 40
+            }
+          ]
+        },
+        {
+          "id": "teh",
+          "name": "Teh",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_665028d6ef7d4.jpg",
+          "variants": [
+            {
+              "id": "teh-tawar-panas",
+              "label": "TEH TAWAR PANAS",
+              "price": 20
+            },
+            {
+              "id": "teh-tawar-dingin",
+              "label": "TEH TAWAR DINGIN",
+              "price": 20
+            },
+            {
+              "id": "teh-manis-panas",
+              "label": "TEH MANIS PANAS",
+              "price": 30
+            },
+            {
+              "id": "teh-manis-dingin",
+              "label": "TEH MANIS DINGIN",
+              "price": 30
+            },
+            {
+              "id": "teh-tarik-panas",
+              "label": "TEH TARIK PANAS",
+              "price": 50
+            },
+            {
+              "id": "teh-susu-panas",
+              "label": "TEH SUSU PANAS",
+              "price": 50
+            },
+            {
+              "id": "teh-tarik-dingin",
+              "label": "TEH TARIK DINGIN",
+              "price": 50
+            },
+            {
+              "id": "teh-susu-dingin",
+              "label": "TEH SUSU DINGIN",
+              "price": 50
+            },
+            {
+              "id": "teh-hijau-panas",
+              "label": "TEH HIJAU PANAS",
+              "price": 50
+            },
+            {
+              "id": "teh-hijau-dingin",
+              "label": "TEH HIJAU DINGIN",
+              "price": 50
+            },
+            {
+              "id": "teh-hijau-susu-panas",
+              "label": "TEH HIJAU SUSU PANAS",
+              "price": 60
+            },
+            {
+              "id": "teh-hijau-susu-dingin",
+              "label": "TEH HIJAU SUSU DINGIN",
+              "price": 60
+            }
+          ]
+        },
+        {
+          "id": "tst-teh-susu-telor",
+          "name": "TST / Teh Susu Telor",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_659fda97f075b.jpg",
+          "variants": [
+            {
+              "id": "tst-panas",
+              "label": "TST PANAS",
+              "price": 65
+            },
+            {
+              "id": "tst-dingin",
+              "label": "TST DINGIN",
+              "price": 65
+            },
+            {
+              "id": "tst-1-telor-bebek",
+              "label": "TST 1 TELOR BEBEK",
+              "price": 70
+            },
+            {
+              "id": "tst-2-telor-panas",
+              "label": "TST 2 TELOR PANAS",
+              "price": 80
+            },
+            {
+              "id": "tst-cappuccino-panas",
+              "label": "TST CAPPUCCINO PANAS",
+              "price": 80
+            },
+            {
+              "id": "tst-coffeemix",
+              "label": "TST COFFEEMIX",
+              "price": 80
+            },
+            {
+              "id": "tst-2-telor-dingin",
+              "label": "TST 2 TELOR DINGIN",
+              "price": 80
+            },
+            {
+              "id": "tst-cappuccino-dingin",
+              "label": "TST CAPPUCCINO DINGIN",
+              "price": 80
+            },
+            {
+              "id": "tst-2-telor-bebek",
+              "label": "TST 2 TELOR BEBEK",
+              "price": 85
+            },
+            {
+              "id": "tst-cappuccino-2-telor",
+              "label": "TST CAPPUCCINO 2 TELOR",
+              "price": 95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bir",
+      "name": "Bir",
+      "items": [
+        {
+          "id": "angkor",
+          "name": "Angkor",
+          "image": "/images/placeholder.png",
+          "variants": [ { "id": "angkor", "label": "ANGKOR", "price": 30 } ]
+        },
+        {
+          "id": "black-panther",
+          "name": "Black Panther",
+          "image": "/images/placeholder.png",
+          "variants": [ { "id": "black-panther", "label": "BLACK PANTHER", "price": 35 } ]
+        },
+        {
+          "id": "singha",
+          "name": "Singha",
+          "image": "/images/placeholder.png",
+          "variants": [ { "id": "singha", "label": "SINGHA", "price": 40 } ]
+        },
+        {
+          "id": "angkor-stout",
+          "name": "Angkor Stout",
+          "image": "/images/placeholder.png",
+          "variants": [ { "id": "angkor-stout", "label": "ANGKOR STOUT", "price": 50 } ]
+        },
+        {
+          "id": "carlsberg",
+          "name": "Carlsberg",
+          "image": "/images/placeholder.png",
+          "variants": [ { "id": "carlsberg", "label": "CARLSBERG", "price": 50 } ]
+        }
+      ]
+    },
+    {
+      "id": "ekstra",
+      "name": "Tambahan",
+      "items": [
+        {
+          "id": "ekstra",
+          "name": "Ekstra",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_68d389e7decb0.jpg",
+          "variants": [
+            {
+              "id": "extra-bawang-goreng",
+              "label": "EXTRA BAWANG GORENG",
+              "price": 10
+            },
+            {
+              "id": "ayam-suwir",
+              "label": "AYAM SUWIR",
+              "price": 30
+            }
+          ]
+        },
+        {
+          "id": "ekstra-kuah-kari",
+          "name": "Martabak - EKSTRA KUAH KARI",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_663b854e99dd1.jpg",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 20
+            }
+          ]
+        },
+        {
+          "id": "ekstra-sambal",
+          "name": "Penyet & Sop - EKSTRA SAMBAL",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_6643922664e29.jpg",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 10
+            }
+          ]
+        },
+        {
+          "id": "extra-kuah-sop",
+          "name": "Penyet & Sop - EXTRA KUAH SOP",
+          "image": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_6643922664e29.jpg",
+          "variants": [
+            {
+              "id": "normal",
+              "label": "Normal",
+              "price": 20
+            }
           ]
         }
       ]

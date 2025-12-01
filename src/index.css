@@ -9,3 +9,20 @@ html, body, #root {
 body {
   @apply bg-gray-50 text-gray-900;
 }
+
+/* Copy button feedback */
+.copy-container {
+  @apply inline-flex items-center gap-2 p-2 rounded cursor-pointer select-none transition-all;
+}
+.copy-container.copied-success {
+  @apply bg-green-50;
+}
+.copy-text {
+  @apply transition-opacity;
+}
+
+/* Nicer copy button colors handled inline with Tailwind classes; keep small focus ring */
+button[aria-label="Salin pesan"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.25);
+}
