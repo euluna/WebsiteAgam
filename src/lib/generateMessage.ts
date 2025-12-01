@@ -14,21 +14,29 @@ export const generateOrderMessage = (
   checkoutData: CheckoutData,
   summary: CartSummary
 ): { plainText: string; whatsappUrl: string; telegramUrl: string } => {
-  const { name, phone, address, paymentMethod, changeAmount, notes } = checkoutData
+  const { name, phone, address, paymentMethod, hasExactChange, cashPaid, currency, notes } = checkoutData
   const orderId = generateOrderId()
 
   const itemLines = items.map(item => {
     const variantLabel = item.variant.label && item.variant.label !== 'Normal' ? ` ( ${item.variant.label} )` : ''
     const itemSubtotal = item.quantity * item.variant.price
-    return `- ${item.quantity}x ${item.name}${variantLabel} — ${formatCurrency(itemSubtotal)}`
+    return `- ${item.quantity}x ${item.name}${variantLabel} — ${formatCurrency(itemSubtotal, currency)}`
   }).join('\n')
 
   let paymentLine: string
   if (paymentMethod === 'Cash') {
-    const changeDetail = changeAmount && Number(changeAmount) > summary.total ? `Change for: ${formatCurrency(Number(changeAmount))}` : 'No change'
-    paymentLine = `Payment: Cash (${changeDetail})`
+    if (hasExactChange) {
+      paymentLine = `Pembayaran: Tunai (Uang pas)`
+    } else if (cashPaid && Number(cashPaid) > 0) {
+      const cash = Number(cashPaid)
+      const change = cash - summary.total
+      const changeLine = change > 0 ? `Kembalian: ${formatCurrency(change, currency)}` : 'Tidak ada kembalian'
+      paymentLine = `Pembayaran: Tunai — Jumlah tunai: ${formatCurrency(cash, currency)}; ${changeLine}`
+    } else {
+      paymentLine = `Pembayaran: Tunai`
+    }
   } else {
-    paymentLine = `Payment: Transfer (please wait for account details)`
+    paymentLine = `Pembayaran: Transfer (tunggu detail rekening)`
   }
 
   const plainText = `Order from: ${storeName}\n\n` +
@@ -36,9 +44,9 @@ export const generateOrderMessage = (
     `Phone: ${phone}\n` +
     `Address: ${address}\n\n` +
     `Order:\n${itemLines}\n\n` +
-    `Subtotal: ${formatCurrency(summary.subtotal)}\n` +
-    `Delivery fee: ${formatCurrency(deliveryFee)}\n` +
-    `Total: ${formatCurrency(summary.total)}\n\n` +
+    `Subtotal: ${formatCurrency(summary.subtotal, currency)}\n` +
+    `Delivery fee: ${formatCurrency(deliveryFee, currency)}\n` +
+    `Total: ${formatCurrency(summary.total, currency)}\n\n` +
     `${paymentLine}\n` +
     `Notes: ${notes || '-'}\n\n` +
     `Order ID: ${orderId}`

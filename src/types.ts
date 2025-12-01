@@ -30,9 +30,10 @@ export type CheckoutData = {
   name: string
   phone: string
   address: string
+  currency?: 'IDR' | 'THB'
   paymentMethod: 'Cash' | 'Transfer'
-  needChange?: boolean
-  changeAmount?: number
+  hasExactChange?: boolean
+  cashPaid?: number
   notes?: string
   saveDetails?: boolean
 }
