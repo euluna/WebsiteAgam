@@ -41,7 +41,7 @@ export const Checkout: React.FC = () => {
       <Header onBack={() => navigate(-1)} />
       <div className="p-4 max-w-2xl mx-auto">
         <h1 className="text-2xl font-bold mb-4">Pembayaran</h1>
-        <div className="mb-4 p-3 bg-gray-100 rounded-lg">
+        <div className="mb-4 p-3 bg-neutral-100 rounded-lg">
             <h3 className="font-semibold">Total Pesanan: {formatCurrency(summary.subtotal, currency)}</h3>
           </div>
 
@@ -82,7 +82,7 @@ export const Checkout: React.FC = () => {
 
         <textarea {...register('notes')} placeholder="Catatan (pribadi)" rows={2} className="w-full p-3 border rounded" />
 
-        <button type="submit" className="w-full bg-orange-500 text-white p-3 rounded font-bold">Buat Pesan</button>
+        <button type="submit" className="w-full bg-primary text-white p-3 rounded font-bold">Buat Pesan</button>
       </form>
       </div>
     </div>

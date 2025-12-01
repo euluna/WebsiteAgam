@@ -39,7 +39,7 @@ export const Home: React.FC = () => {
                 <button
                   aria-label="Sembunyikan kategori"
                   onClick={() => setSidebarOpen(false)}
-                  className="absolute top-1/2 right-0 transform -translate-y-1/2 w-10 h-12 rounded-l-full bg-orange-500 text-white flex items-center justify-center shadow-md hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-300">
+                  className="absolute top-1/2 right-0 transform -translate-y-1/2 w-10 h-12 rounded-l-full bg-white text-primary flex items-center justify-center shadow-md hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-accent">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M12.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 111.414 1.414L10.414 10l2.293 2.293a1 1 0 010 1.414z" clipRule="evenodd" />
                   </svg>

@@ -47,7 +47,7 @@ export const MessageGenerator: React.FC = () => {
           <div>
             <pre className="whitespace-pre-wrap bg-white p-3 rounded border">{plainText}</pre>
             <div className="mt-3">
-              <button onClick={handleCopy} aria-label="Salin pesan" className={`block w-full text-center p-3 rounded shadow ${copied ? 'bg-green-500 text-white' : 'bg-orange-500 text-white'}`}>
+              <button onClick={handleCopy} aria-label="Salin pesan" className={`block w-full text-center p-3 rounded shadow ${copied ? 'bg-green-500 text-white' : 'bg-primary text-white'}`}>
                 <div className="flex items-center justify-center gap-2">
                   {!copied ? (
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
@@ -70,7 +70,7 @@ export const MessageGenerator: React.FC = () => {
         </div>
 
         <div className="mt-4 flex space-x-2">
-          <button onClick={handleSelesai} className="flex-1 p-3 bg-gray-200 rounded">Selesai</button>
+          <button onClick={handleSelesai} className="flex-1 p-3 bg-neutral-100 text-primary rounded">Selesai</button>
         </div>
       </div>
     </div>

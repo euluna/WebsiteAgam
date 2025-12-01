@@ -9,7 +9,7 @@ export const CategoryChips: React.FC<{ categories: Category[]; selected: string;
         <button
           key={cat.id}
           onClick={() => onSelect(cat.id)}
-          className={`block w-full text-left px-3 py-2 rounded ${selected === cat.id ? 'bg-orange-500 text-white' : 'hover:bg-gray-100'}`}>
+          className={`block w-full text-left px-3 py-2 rounded ${selected === cat.id ? 'bg-primary text-white' : 'hover:bg-neutral-100'}`}>
           <span className={`${compact ? 'text-xs' : 'text-sm'} truncate block whitespace-nowrap`}>{cat.name}</span>
         </button>
       ))}

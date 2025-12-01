@@ -39,7 +39,7 @@ export const ItemModal: React.FC<Props> = ({ item, onClose }) => {
     <div className="fixed inset-0 z-50 bg-white overflow-auto p-4">
       <div className="max-w-2xl mx-auto pb-28">
         <div className="flex items-center gap-3 mb-2">
-          <button aria-label="Kembali" onClick={onClose} className="w-10 h-10 rounded-sm bg-orange-500 text-white flex items-center justify-center">
+          <button aria-label="Kembali" onClick={onClose} className="w-10 h-10 rounded-sm bg-primary text-white flex items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M12.293 16.293a1 1 0 010-1.414L8.414 11H17a1 1 0 110 2H8.414l3.879 3.879a1 1 0 01-1.414 1.414l-5.586-5.586a1 1 0 010-1.414l5.586-5.586a1 1 0 111.414 1.414L8.414 11H17a1 1 0 110 2H8.414l3.879 3.879a1 1 0 010 1.414z" clipRule="evenodd" />
             </svg>
@@ -78,7 +78,7 @@ export const ItemModal: React.FC<Props> = ({ item, onClose }) => {
           </label>
 
           <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t">
-            <button type="submit" className="w-full bg-orange-500 text-white p-3 rounded font-bold">
+            <button type="submit" className="w-full bg-primary text-white p-3 rounded font-bold">
               Tambah ({formatCurrency(((item.variants.find(v => v.id === watchedVariantId) || item.variants[0])?.price || 0) * quantity)})
             </button>
           </div>
