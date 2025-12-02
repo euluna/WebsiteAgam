@@ -4,7 +4,11 @@
     "phone": "628123456789",
     "deliveryFee": 6,
     "currency": "THB",
-    "currencyFormat": "฿"
+    "currencyFormat": "฿",
+    "mapUrl": "https://www.google.com/maps/place/MHC6%2BR9H+WARKOP+AGAM+PARAMAX,+Krong+Poi+Pet,+Cambodia/data=!4m2!3m1!1s0x311b17001fca2f07:0x6f05c1abb3565737?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI1LjE1LjEYACCenQoqbCw5NDIyMzI5OSw5NDIxNjQxMyw5NDIxMjQ5Niw5NDIwNzM5NCw5NDIwNzUwNiw5NDIwODUwNiw5NDIxNzUyMyw5NDIxODY1Myw5NDIyOTgzOSw0NzA4NDM5Myw5NDIxMzIwMCw5NDI1ODMxOUICQ0E%3D&skid=961c6664-e3ef-4d2e-985b-2bee658ff95e",
+    "whatsapp1": "+62 859-4521-6880",
+    "whatsapp2": "+855 96 290 2125",
+    "telegram": "agamparamax"
   },
   "categories": [
     {
