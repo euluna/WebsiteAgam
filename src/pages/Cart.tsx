@@ -25,7 +25,14 @@ const Cart: React.FC = () => {
     <div>
       <Header onBack={() => navigate(-1)} />
       <div className="p-4 max-w-2xl mx-auto space-y-4">
-        <h1 className="text-2xl font-bold">Keranjang</h1>
+        <h1 className="text-2xl font-bold flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 7h14l-2-7" />
+            <circle cx="10" cy="20" r="1" />
+            <circle cx="18" cy="20" r="1" />
+          </svg>
+          <span className="sr-only">Keranjang</span>
+        </h1>
 
         <div className="space-y-3">
           {cart.map(item => (
