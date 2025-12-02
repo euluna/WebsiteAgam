@@ -1,7 +1,9 @@
 import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-// If you deploy this repo to GitHub Pages under https://<user>.github.io/WebsiteAgam/
-// set the base to '/WebsiteAgam/' so built asset paths are correct.
+// https://vitejs.dev/config/
 export default defineConfig({
+  plugins: [react()],
+  // FIX: Add base path for GitHub Pages deployment
   base: '/WebsiteAgam/'
 })
